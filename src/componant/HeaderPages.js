@@ -10,8 +10,8 @@ function HeaderPages() {
             <img
               src={logo}
               title="logo"
-              height="40px"
-              width="50px"
+              height="100px"
+              width="100px"
               alt="Logo"
             />
           </a>
@@ -121,16 +121,7 @@ function HeaderPages() {
                       Action
                     </a>
                   </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
+                 
                 </ul>
               </li>
               <li className="nav-item">
