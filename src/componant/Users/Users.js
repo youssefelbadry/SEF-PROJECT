@@ -8,7 +8,7 @@ import Footer from '../Footer';
 
 
 const Users = () => {
-    // const navigate = useNavigate();
+        // const navigate = useNavigate();
 
     // function movetoCreatejop(e) {
     //     e.preventDefault();
@@ -166,285 +166,283 @@ const Users = () => {
     //     </div>
     // );
     const UserData = [
-        {
-          id: 1,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-        {
-          id: 2,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-        {
-          id: 3,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-        {
-          id: 4,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-        {
-          id: 5,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-        {
-          id: 6,
-          title: "Here’s the username",
-          status: "",
-          userid: "FE-2023",
-          role: "student",
-          email: "usertwo@gmail.com",
-          icons: "",
-        },
-      ];
-    // DRAWITEM
-  const UsItem = UserData.map((item, index) => {
-    let buttonStyle = {};
-    let buttonText = "";
+      {
+        id: 1,
+        title: "Here’s the username",
+        status: "",
+        userid: "FE-2023",
+        role: "Admin",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+      {
+        id: 2,
+        title: "Here’s the username",
+        status: "",
+        userid: "BE-2302",
+        role: "Editor",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+      {
+        id: 3,
+        title: "Here’s the username",
+        status: "",
+        userid: "BE-2302",
+        role: "Instructor",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+      {
+        id: 4,
+        title: "Here’s the username",
+        status: "",
+        userid: "BE-2302",
+        role: "student",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+      {
+        id: 5,
+        title: "Here’s the username",
+        status: "",
+        userid: "BE-2302",
+        role: "Instructor",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+      {
+        id: 6,
+        title: "Here’s the username",
+        status: "",
+        userid: "BE-2302",
+        role: "Admin",
+        email: "usertwo@gmail.com",
+        icons: "",
+      },
+    ];
+  // DRAWITEM
+const UsItem = UserData.map((item, index) => {
+  let buttonStyle = {};
+  let buttonText = "";
 
-    if (index < 2) {
-      buttonStyle = {
-        backgroundColor: "#BF9B30",
-        color: "white",
-        borderRadius: "10px",
-        border: "none",
-        padding: "5px 30px",
-      };
-      buttonText = "Active";
-    } else if (index < 6) {
-      buttonStyle = {
-        backgroundColor: "gray",
-        color: "white",
-        borderRadius: "10px",
-        border: "none",
-        padding: "5px 30px",
-      };
-      buttonText = "Inactive";
-    }
-
-    return (
-      <table className="table mob-table" key={index}>
-        <tbody>
-          <tr>
-            <td className="col-lg-2 rr zz">
-              <strong>Name:</strong>
-              {item.title}
-            </td>
-            <td className="col-lg-2 but-lg">
-              <button style={buttonStyle}>{buttonText}</button>
-            </td>
-            <td className="col-lg-2 zz">
-              <strong>User Id:</strong>
-              {item.userid}
-            </td>
-
-            <td className="col-lg-2 time zz">
-              <strong>Role:</strong>
-              {item.role}
-            </td>
-            <td className="col-lg-2 time zz">
-              <strong>Email:</strong>
-              {item.email}
-            </td>
-            <td className="col-lg-2 but-mob">
-              <button style={buttonStyle}>{buttonText}</button>
-            </td>
-            <td className="col-lg-2 rrr">
-              <div className="icons rrr">
-                <i class="far fa-trash-alt col-lg-6"></i>
-                <i class="far fa-edit col-lg-6"></i>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    );
-  });
-  //===============================================================================
+  if (index < 2) {
+    buttonStyle = {
+      backgroundColor: "#BF9B30",
+      color: "white",
+      borderRadius: "10px",
+      border: "none",
+      padding: "5px 30px",
+    };
+    buttonText = "Active";
+  } else if (index < 6) {
+    buttonStyle = {
+      backgroundColor: "gray",
+      color: "white",
+      borderRadius: "10px",
+      border: "none",
+      padding: "5px 30px",
+    };
+    buttonText = "Inactive";
+  }
 
   return (
-    <div>
-      {/* SECTION 1 */}
-      <div className="all-project col-lg-12">
-        <div className="opicity">
-          <HeaderPages />
-          {/* ================================================================= */}
-          {/* SECTION2 */}
-          <div className="admin-banel container">
-            <div>
-              <span>Admin Panel</span>
-              <div className="line"></div>
-              <span>6th June 2023</span>
-            </div>
+    <table className="table mob-table" key={index}>
+      <tbody>
+        <tr>
+          <td className="col-lg-2 rr zz">
+            <strong>Name:</strong>
+            {item.title}
+          </td>
+          <td className="col-lg-2 but-lg">
+            <button style={buttonStyle}>{buttonText}</button>
+          </td>
+          <td className="col-lg-2 zz">
+            <strong>User Id:</strong>
+            {item.userid}
+          </td>
 
-            <div className="btn-admin">
-              <button className="btn" style={{ backgroundColor: "#bf9b30" }}>
-                CREATE NEW USER
-              </button>
+          <td className="col-lg-2 time zz">
+            <strong>Role:</strong>
+            {item.role}
+          </td>
+          <td className="col-lg-2 time zz">
+            <strong>Email:</strong>
+            {item.email}
+          </td>
+          <td className="col-lg-2 but-mob">
+            <button style={buttonStyle}>{buttonText}</button>
+          </td>
+          <td className="col-lg-2 rrr">
+            <div className="icons rrr">
+              <i class="far fa-trash-alt col-lg-6"></i>
+              <i class="far fa-edit col-lg-6"></i>
             </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  );
+});
+//===============================================================================
+
+return (
+  <div className='text-light'>
+    {/* SECTION 1 */}
+    
+        <HeaderPages />
+        {/* ================================================================= */}
+        {/* SECTION2 */}
+        <div className="admin-banel container">
+          <div>
+            <span>Admin Panel</span>
+            <div className="line"></div>
+            <span>6th June 2023</span>
           </div>
-          <div className="sec2 container">
-            <div class="left-nav col-sm-12 col-lg-3">
-             <Sidebar/>
-            </div>
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <div className="container">
-                    <div className="row">
-                      <div className="show-phone-ul">
-                        <div className="row">
-                          <ul className="col">
-                            <li className="col-3">
-                              <h3>Users</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Articles</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Jobs</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Courses</h3>
-                            </li>
-                          </ul>
-                        </div>
+
+          <div className="btn-admin">
+            <button className="btn" style={{ backgroundColor: "#bf9b30" }}>
+              CREATE NEW USER
+            </button>
+          </div>
+        </div>
+        <div className="sec2 container">
+          <div class="left-nav col-sm-12 col-lg-3">
+           <Sidebar/>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div className="container">
+                  <div className="row">
+                    <div className="show-phone-ul">
+                      <div className="row">
+                        <ul className="col">
+                          <li className="col-3">
+                            <h3>Users</h3>
+                          </li>
+                          <li className="col-3">
+                            <h3>Articles</h3>
+                          </li>
+                          <li className="col-3">
+                            <h3>Jobs</h3>
+                          </li>
+                          <li className="col-3">
+                            <h3>Courses</h3>
+                          </li>
+                        </ul>
                       </div>
-                      <div className="choeses">
-                        <select
-                          style={{
-                            backgroundColor: "rgba(131, 128, 128,0.8)",
-                            color: "white",
-                          }}
-                          class="form-select btn se"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Students</option>
-                          <option value="1">Users</option>
-                          <option value="2">Articles</option>
-                          <option value="3">Jobs</option>
-                          <option value="3">Courses</option>
-                        </select>
-                      </div>
+                    </div>
+                    <div className="choeses">
+                      <select
+                        style={{
+                          backgroundColor: "rgba(131, 128, 128,0.8)",
+                          color: "white",
+                        }}
+                        class="form-select btn se"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Students</option>
+                        <option value="1">Users</option>
+                        <option value="2">Articles</option>
+                        <option value="3">Jobs</option>
+                        <option value="3">Courses</option>
+                      </select>
                     </div>
                   </div>
-                  <div className="hheader container">
-                    <div className="line-hight">
-                      <h2 style={{ margin: "20px 30px" }}>User-Students</h2>
-                      <div className="line"></div>
-                    </div>
-                    {/* <div className="search">
-                      <div className="" md>
-                        <div
-                          controlId="floatingInputGrid"
-                          className=" form-floating"
-                        >
-                          <div className="search-container">
-                            <input
-                              className="form form-control"
-                              type="text"
-                              placeholder="Search"
-                              style={{ backgroundColor: "gray", border: "0" }}
-                            />
-                            <i class="fas fa-search search-icon"></i>
-                          </div>
+                </div>
+                <div className="hheader container">
+                  <div className="line-hight">
+                    <h2 style={{ margin: "20px 30px" }}>Users</h2>
+                    <div className="line"></div>
+                  </div>
+                  {/* <div className="search">
+                    <div className="" md>
+                      <div
+                        controlId="floatingInputGrid"
+                        className=" form-floating"
+                      >
+                        <div className="search-container">
+                          <input
+                            className="form form-control"
+                            type="text"
+                            placeholder="Search"
+                            style={{ backgroundColor: "gray", border: "0" }}
+                          />
+                          <i class="fas fa-search search-icon"></i>
                         </div>
                       </div>
-                    </div> */}
-                    <div className="col-md-5 mt-3 mt-md-0">
-              <div className="search-container d-none d-md-flex">
-                <input
-                  type="text"
-                  className="search-input"
-                  placeholder="Search In Users"
-                />
-                <button className="search-btn">
-                  <i className="fas fa-search"></i>
+                    </div>
+                  </div> */}
+                  <div className="col-md-5 mt-3 mt-md-0">
+            <div className="search-container d-none d-md-flex">
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search In Users"
+              />
+              <button className="search-btn">
+                <i className="fas fa-search"></i>
+              </button>
+            </div>
+            <div className="d-block d-md-none">
+              <div className="mobile-dropdown">
+                <button className="dropdown-btn">
+                  Students
+                  <i className="fas fa-chevron-down dropdown-arrow"></i>
                 </button>
               </div>
-              <div className="d-block d-md-none">
-                <div className="mobile-dropdown">
-                  <button className="dropdown-btn">
-                    Students
-                    <i className="fas fa-chevron-down dropdown-arrow"></i>
+            </div>
+          </div>
+                </div>
+                <table className="table table-mob">
+                  <thead>
+                    <tr>
+                      <td className="col-lg-2">Name</td>
+                      <td className="col-lg-2">Status</td>
+                      <td className="col-lg-2">User Id</td>
+                      <td className="col-lg-2">Role</td>
+                      <td className="col-lg-2">EmailL</td>
+                      <td className="col-lg-2">Delete & Edit</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+
+            <div className="col push">
+              {UsItem}
+              <div
+                className="btn-admin-mob" >
+                <div>
+                  <button
+                    className="btn"
+                    style={{ backgroundColor: "#bf9b30", margin: "auto" }}
+                  >
+                    CREATE NEW USER
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="btn"
+                    style={{
+                      borderColor: "#bf9b30",
+                      color: "white",
+                      margin: "auto",
+                    }}
+                  >
+                    Uploud Certificates
                   </button>
                 </div>
               </div>
             </div>
-                  </div>
-                  <table className="table table-mob">
-                    <thead>
-                      <tr>
-                        <td className="col-lg-2">Name</td>
-                        <td className="col-lg-2">Status</td>
-                        <td className="col-lg-2">User Id</td>
-                        <td className="col-lg-2">Role</td>
-                        <td className="col-lg-2">EmailL</td>
-                        <td className="col-lg-2">Delete & Edit</td>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-
-              <div className="col push">
-                {UsItem}
-                <div
-                  className="btn-admin-mob" >
-                  <div>
-                    <button
-                      className="btn"
-                      style={{ backgroundColor: "#bf9b30", margin: "auto" }}
-                    >
-                      CREATE NEW USER
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      className="btn"
-                      style={{
-                        borderColor: "#bf9b30",
-                        color: "white",
-                        margin: "auto",
-                      }}
-                    >
-                      Uploud Certificates
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-          {/* =========================================================================== */}
-          <Footer/>
-        
         </div>
+        {/* =========================================================================== */}
+        <Footer/>
+      
       </div>
-    </div>
+   
   );
 };
 

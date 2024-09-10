@@ -1,10 +1,9 @@
 import React from "react";
-import Sidenar from "../sidebar";
 import { useNavigate } from "react-router-dom";
-
-import jobs from "../../Data/jobs";
+import JospsData from "../../Data/jobs";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import Sidebar from "../sidebar";
 const Jobs = () => {
   const navigate = useNavigate();
 
@@ -12,9 +11,123 @@ const Jobs = () => {
     e.preventDefault();
     navigate("/jobForm"); // Navigate to the JobForm page
   }
+  const CCjobs = [
+    {
+        id : 1,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"20",
+        icons : ""
+    },
+    {
+        id: 2,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"25",
+        icons : ""
+    },    {
+        id : 3,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"48",
+        icons : ""
+    },    {
+        id : 4,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"0",
+        icons : ""
+    },    {
+        id : 5,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"11",
+        icons : ""
+    },    {
+        id : 6,
+        company: "Here’s the company name",
+        position: "Here’s the position",
+        status: "",
+        posted:"Monday, June 5th 12:30 pm",
+        Applications:"19",
+        icons : ""
+    }
+]
 
+  const CJItem = CCjobs.map((item, index) => {
+    let buttonStyle = {};
+    let buttonText = "";
+
+    if (index < 2) {
+      buttonStyle = {
+        backgroundColor: "#BF9B30",
+        color: "white",
+        borderRadius: "20px",
+        border: "none",
+        padding: "5px 15px",
+      };
+      buttonText = "Open";
+    } else if (index < 6) {
+      buttonStyle = {
+        backgroundColor: "gray",
+        color: "white",
+        borderRadius: "20px",
+        border: "none",
+        padding: "5px 15px",
+      };
+      buttonText = "Closed";
+    }
+
+    return (
+      <table className="table mob-table" key={index}>
+        <tbody>
+          <tr>
+            <td className="col-lg-2 rr zz">
+              <strong>Company:</strong>
+              {item.company}
+            </td>
+
+            <td className="col-lg-2 zz">
+              <strong>Position:</strong>
+              {item.position}
+            </td>
+            <td className="col-lg-2 but-lg">
+              <button style={buttonStyle}>{buttonText}</button>
+            </td>
+            <td className="col-lg-2 time zz">
+              <strong>Posted At:</strong>
+              {item.posted}
+            </td>
+            <td className="col-lg-2 time zz">
+              <strong>Applications:</strong>
+              {item.Applications}
+            </td>
+            <td className="col-lg-2 but-mob">
+              <button style={buttonStyle}>{buttonText}</button>
+            </td>
+            <td className="col-lg-2 rrr zz">
+              <div className="icons rrr">
+                <i class="far fa-trash-alt col-lg-6"></i>
+                <i class="far fa-edit col-lg-6"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  });
   return (
-    <div className="container mt-3 mb-5">
+    <div className="container mt-3 mb-5 text-light">
       <HeaderPages />
       <div className="row">
         {/* Top Div */}
@@ -33,23 +146,57 @@ const Jobs = () => {
           </div>
         </div>
         {/* Left Div */}
-        <div className="col-lg-3 col-md-12">
-          <Sidenar />
-        </div>
-
-        {/* Right Div */}
-        <div className="col-lg-9 col-md-12">
-          {/* content of right div */}
-          <div className="row align-items-center justify-content-between mb-3">
-            <div className="col-md-5 text-md-start text-center">
-              <div className="header-title">
-                Jobs
-                <div className="linee mx-auto mx-md-0"></div>
-              </div>
+        <div className="sec2 container">
+            <div class="left-nav col-sm-12 col-lg-3 det-left">
+            <Sidebar/>
             </div>
-            {/* search of right div */}
-            <div className="col-md-5 mt-3 mt-md-0">
-              {/* Search Div for Desktop */}
+            <div className="container mt-4">
+              <div className="row">
+                <div className="col">
+                  <div className="container">
+                    <div className="row">
+                      <div className="show-phone-ul">
+                        <div className="row">
+                          <ul className="col">
+                            <li className="col-3">
+                              <h3>Users</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Articles</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Jobs</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Courses</h3>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="choeses">
+                        <select
+                          style={{
+                            backgroundColor: "rgba(131, 128, 128,0.8)",
+                            color: "white",
+                          }}
+                          class="form-select btn se"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Students</option>
+                          <option value="1">Users</option>
+                          <option value="2">Articles</option>
+                          <option value="3">Jobs</option>
+                          <option value="3">Courses</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hheader container">
+                    <div className="line-hight ">
+                      <h2 style={{ margin: "20px 30px" }}>Jobs</h2>
+                      <div className="line"></div>
+                    </div>
+                    <div className="col-md-5 mt-3 mt-md-0">
               <div className="search-container d-none d-md-flex">
                 <input
                   type="text"
@@ -60,166 +207,44 @@ const Jobs = () => {
                   <i className="fas fa-search"></i>
                 </button>
               </div>
-              {/* Menu for Mobile */}
               <div className="d-block d-md-none">
                 <div className="mobile-dropdown">
                   <button className="dropdown-btn">
-                    Published Jobs
+                    Students
                     <i className="fas fa-chevron-down dropdown-arrow"></i>
                   </button>
                 </div>
               </div>
             </div>
-          </div>
-          {/* table */}
-          <div className="table-responsive">
-            <table className="table table-dark articles-table">
-              <thead>
-                <tr>
-                  <th>Company</th>
-                  <th>Position</th>
-                  <th>Status</th>
-                  <th>Posted At</th>
-                  <th>Applications</th>
-                </tr>
-              </thead>
-              <tbody>
-                {jobs.map((job, index) => (
-                  <React.Fragment key={index}>
-                    <>
-                      {/* Table for Mobile */}
-                      <tr className="d-block d-md-none px-0 w-100 col-12 mx-auto">
-                        <td className="d-flex mx-auto w-100 mt-3" colSpan="5">
-                          <div className="box mb-3 row w-100 mx-auto mt-2">
-                            <div className="col-12 w-100 p-0 mx-auto">
-                              <div className="d-flex justify-content-between align-items-center">
-                                <h6 className="fw-bold fs-6">Company:</h6>
-                                <span
-                                  className={`${
-                                    job.status === "Open"
-                                      ? "bg-primary"
-                                      : "bg-grey"
-                                  } ButtonsTable fs-6 fw-medium text-center py-1`}
-                                  style={{ width: "35%" }}
-                                >
-                                  {job.status}
-                                </span>
-                              </div>
-                              <p className="mt-2 mb-0 fs-5 fw-lighter">
-                                {job.company}
-                              </p>
-                            </div>
-
-                            <div className="col-6 mt-3 p-0">
-                              <h6 className="fw-bold fs-6">Position:</h6>
-                              <p className="fw-lighter fs-6">{job.position}</p>
-                            </div>
-
-                            <div className="col-6 mt-3 p-0 d-flex flex-column  text-center justify-content-end align-items-start">
-                              <h6 className="fw-bold  fs-6">Applications:</h6>
-                              <p className="  fs-6 fw-lighter text-end ">
-                                {job.applications}
-                              </p>
-                            </div>
-                            <div className="col-12 p-0">
-                              <h6 className="fw-bold text-start fs-6">
-                                Posted At:
-                              </h6>
-                              <p className="text-start fs-6 fw-lighter ">
-                                {`${job.dateTime.split(" ")[0]} ${
-                                  job.dateTime.split(" ")[1]
-                                } ${job.dateTime.split(" ")[2]}`}
-                                <br />
-                                {`${job.dateTime.split(" ")[3]} ${
-                                  job.dateTime.split(" ")[4]
-                                }`}
-                              </p>
-                            </div>
-                            <div className="text-end">
-                              <button className="btn-act me-3">
-                                <i className="fas fa-edit"></i>
-                              </button>
-                              <button className="btn-act">
-                                <i className="fas fa-trash-alt"></i>
-                              </button>
-                            </div>
-                          </div>
-                        </td>
+                  </div>
+                  <table className="table table-mob">
+                    <thead>
+                      <tr>
+                        <td className="col-lg-2">Company</td>
+                        <td className="col-lg-2">Position</td>
+                        <td className="col-lg-2">Status</td>
+                        <td className="col-lg-2">Posted At</td>
+                        <td className="col-lg-2">Applications</td>
+                        <td className="col-lg-2">Delete & Edit</td>
                       </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
 
-                      {/* Table for Desktop */}
-                      <tr className="d-none d-md-table-row">
-                        <td data-label="Company">{job.company}</td>
-                        <td data-label="Position">{job.position}</td>
-                        <td data-label="Status">
-                          <span
-                            className={`${
-                              job.status === "Open" ? "bg-primary" : "bg-grey"
-                            } ButtonsTable`}
-                          >
-                            {job.status}
-                          </span>
-                        </td>
-                        <td data-label="Posted At">
-                          <span className="date-time">
-                            {`${job.dateTime.split(" ")[0]} ${
-                              job.dateTime.split(" ")[1]
-                            } ${job.dateTime.split(" ")[2]}`}
-                            <br />
-                            {`${job.dateTime.split(" ")[3]} ${
-                              job.dateTime.split(" ")[4]
-                            }`}
-                          </span>
-                        </td>
-                        <td
-                          data-label="Applications"
-                          className="text-start text-md-center"
-                        >
-                          {job.applications}
-                        </td>
-                        <td className="text-end">
-                          <div className="action-buttons">
-                            <button className="me-1 btn-act">
-                              <i className="fas fa-edit"></i>
-                            </button>
-                            <button className="btn-act">
-                              <i className="fas fa-trash-alt"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    </>
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table>
+              <div className=" push">
+                {CJItem}
+                <div className="btn-admin-mob">
+                  <button
+                    className="btn"
+                    style={{ backgroundColor: "#bf9b30" }}
+                  >
+                    CREATE NEW JOB
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div className="pagination">
-            <a href="#" className="arrow">
-              <i
-                className="fas fa-chevron-left"
-                style={{ color: "#BF9530" }}
-              ></i>
-            </a>
-
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <span>.....</span>
-            <a href="#" className="arrow">
-              <i
-                className="fas fa-chevron-right"
-                style={{ color: "#BF9530" }}
-              ></i>
-            </a>
-          </div>
-
-          {/* Button at the bottom */}
-          <div className="d-block d-lg-none text-center mt-4 d-md-flex justify-content-md-end ">
-            <button className="btn-gold w-100">Create New Job</button>
-          </div>
-        </div>
       </div>
       <Footer />
     </div>

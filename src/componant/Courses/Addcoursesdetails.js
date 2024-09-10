@@ -5,8 +5,9 @@ import HeaderPages from '../HeaderPages';
 import FileUpload from '../Articledetails/fileUpload'
 const Addcoursesdetails = () => {
     return (
+        <div>
 
-        <div className="container">
+        <div className="container moreinput">
                    
             <HeaderPages/>
         <div className='row mt-5'>
@@ -92,11 +93,55 @@ const Addcoursesdetails = () => {
             {/* Add Lesson */}
            
         </div>
+        
         </div>
-        <div className=" col-md-12">
-                 <Footer/>
-                </div>
+        <div className="container text-light bc">
+      <div className="row mt-5">
+        <div className="col-12 right-lesson" >
+          <div className="end-header">
+            <span style={{ display: "inline", fontSize: "30px" }}>Lessons</span>
+          </div>
+          <div className="d-flex justify-content-right mb-1 div-right">
+            <span style={{ fontSize: "20px" }}>Add Lesson</span>
+            <i className="fas fa-plus-circle" style={{ color: "#bf9b30", marginTop: "5px", marginLeft: "5px" }}></i>
+          </div>
         </div>
+
+        <div className="col-12  " >
+          <div className="card card2 p-3 shadow-sm" style={{ height: "auto", maxWidth: "570px" }}>
+            <form className="mt-3">
+              <div className="trash d-flex justify-content-between" style={{ marginBottom: "25px" }}>
+                <span style={{ fontSize: "20px", width: "90px" }}>Lesson 1</span>
+                <i className="far fa-trash-alt" style={{ fontSize: "20px", color: "#bf9b30" }}></i>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="title" className="form-label">Title</label>
+                <input type="text" className="form-control" id="title" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="description" className="form-label">Description</label>
+                <input className="form-control" id="description" style={{ height: "80px" }} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="url" className="form-label">Lecture URL</label>
+                <input type="url" className="form-control" id="url" />
+              </div>
+            </form>
+          </div>
+
+          <div className="mt-3 footer-btn">
+            <button className="btn col-sm-7" style={{ backgroundColor: "gray" }}>Cancel</button>
+            <button className="btn col-sm-7" style={{ backgroundColor: "#bf9b30", color: "white" }}>Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+               
+        </div>
+        <Footer/>
+        </div>
+
     );
 };
 

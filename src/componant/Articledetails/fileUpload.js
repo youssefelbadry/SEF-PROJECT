@@ -4,48 +4,25 @@ function FileUpload() {
   
   return (
     <div className="container mt-3 col-12">
-      <div
-        className="border border-warning dot rounded p-5"
-        style={{ cursor: 'pointer' }}
-      >
-        <div className="text-center">
-          <i className="fas fa-cloud-upload-alt fa-2x text-warning"></i>
-          <p className='cap py-2'>drag & drop your files here or
-        
-          <span >
-          <label htmlFor="fileInput" >
-            <a className="text-warning ps-1 cap">
-            Browse Files
-            </a>
-          </label>
-          </span>
-          </p>
-          <p className='cap capli ' style={{fontSize:'14px'}}>Support formates : JPEG,PNG,GIF,MP4,PDF,PSD,<br className='d-block d-md-none'/>AL,Word,PPT</p>
-        
-          <input
-            type="file"
-            multiple
-            className="form-control-file"
-            style={{ display: 'none' }}
-            id="fileInput"
-          />
-       
+      <div className="container">
+      <div className="col-md-12">
+        <div className="cover-photo" style={{ paddingTop: "50px" }}>
+          <h3>Upload Cover Photo</h3>
+          <button type="button" className="mb-4" style={{ width: "100%", height: "300px" }}>
+            <i className="fas fa-cloud-upload-alt"></i>
+            <h6>
+              Drag & drop files or{" "}
+              <span style={{ color: "#bf9b30", textDecoration: "underline" }}>Browse</span>
+            </h6>
+            <p style={{ color: "grey" }}>
+              Supported Formats: JPEG, PNG, GIF, MP4, PDF, PSD, AI, WORD, PPT
+            </p>
+          </button>
         </div>
       </div>
-
-      {/* {selectedFiles.length > 0 && (
-        <div className="mt-3">
-          <h5>Selected Files:</h5>
-          <ul className="list-group">
-            {/* {selectedFiles.map((file, index) => (
-              <li key={index} className="list-group-item">
-                {file.name}
-              </li>
-            ))} 
-          </ul> 
-        </div>
-      )}*/}
     </div>
+    </div>
+    
   );
 }
 

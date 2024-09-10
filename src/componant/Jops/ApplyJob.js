@@ -62,7 +62,7 @@ function ApplyJob() {
                 Here you can find your bestmatch <br />
                 between 1000s of updated and available positions.
               </p>
-              <div className="line"></div>
+              <div className="linee d-none d-md-block mx-md-0"></div>
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">

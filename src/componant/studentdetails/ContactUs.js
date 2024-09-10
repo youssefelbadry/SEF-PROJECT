@@ -5,9 +5,9 @@ import Footer from "../Footer";
 // ContactUs Component
 const ContactUs = () => {
   return (
-    <div className="all-project">
+   
 
-      <div className="opicity">
+      <div >
       <HeaderPages/>
 
         <div className="container all-section">
@@ -97,7 +97,6 @@ const ContactUs = () => {
         </div>
         <Footer/>
       </div>
-    </div>
   );
 }
 

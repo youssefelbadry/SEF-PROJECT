@@ -1,12 +1,52 @@
-import React from 'react'
+const JospsData = [
+    {
+      id: 1,
+      title: "Here’s the article title",
+      Experiance: "2 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+    {
+      id: 2,
+      title: "Here’s the article title",
+      Experiance: "3 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+    {
+      id: 3,
+      title: "Here’s the article title",
+      Experiance: "1 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+    {
+      id: 4,
+      title: "Here’s the article title",
+      Experiance: "3 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+    {
+      id: 5,
+      title: "Here’s the article title",
+      Experiance: "2 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+    {
+      id: 6,
+      title: "Here’s the article title",
+      Experiance: "4 Years",
+      Email: "usertwo@gmail.com",
+      phone: "002011289304",
+      cv: "",
+    },
+  ];
 
-    const jobs = [
-        { company: " the company name", position: " the position", status: 'Open', dateTime: 'Monday, June 5th 12:30 PM', applications: 20 },
-        { company: " the company name", position: " the position", status: 'Open', dateTime: 'Monday, June 5th 12:30 PM', applications: 25 },
-        { company: " the company name", position: " the position", status: 'Closed', dateTime: 'Monday, June 5th 12:30 PM', applications: 48 },
-        { company: " the company name", position: " the position", status: 'Closed', dateTime: 'Monday, June 5th 12:30 PM', applications: 0 },
-        { company: " the company name", position: " the position", status: 'Closed', dateTime: 'Monday, June 5th 12:30 PM', applications: 11 },
-        { company: " the company name", position: " the position", status: 'Closed', dateTime: 'Monday, June 5th 12:30 PM', applications: 19 },
-    ];
-
-export default jobs
+export default JospsData

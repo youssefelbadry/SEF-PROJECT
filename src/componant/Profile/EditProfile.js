@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../HeaderPages";
 import { useNavigate } from "react-router-dom";
+import HeaderPages from "../HeaderPages";
 function EditProfile() {
     const navigate = useNavigate();
 
@@ -9,10 +10,9 @@ function EditProfile() {
     navigate("/profile"); 
   }
     return (
-        <div>
-          <div className="all-project">
-            <div className="opicity">
-              <Header />
+      <div className="text-light">
+          
+              <HeaderPages />
               {/* ================================================================= */}
               {/* SECTION2 */}
               <div className="admin-banel container">
@@ -179,8 +179,7 @@ function EditProfile() {
               </div>
         
             </div>
-          </div>
-        </div>
+         
       );
 }
 

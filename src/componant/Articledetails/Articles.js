@@ -4,6 +4,8 @@ import Sidenar from '../sidebar';
 import { useNavigate } from 'react-router-dom';
 import HeaderPages from '../HeaderPages';
 import Footer from '../Footer';
+import logo from "../../image/seff_logo_transparent.png";
+import Sidebar from '../sidebar';
 
 const Articles = () => {
   const navigate = useNavigate();
@@ -22,147 +24,194 @@ const Articles = () => {
     { title: "Here's the article title", category: 'Business', status: 'Draft', dateTime: 'Monday, June 5th 12:30 PM' },
   ];
 
+  const TdItem = articles.map((item, index) => {
+    let buttonStyle = {};
+    let buttonText = "";
+
+    if (index < 2) {
+      buttonStyle = {
+        backgroundColor: "#BF9B30",
+        color: "white",
+        borderRadius: "10px",
+        border: "none",
+        padding: "5px 15px",
+      };
+      buttonText = "Published";
+    } else if (index < 6) {
+      buttonStyle = {
+        backgroundColor: "gray",
+        color: "white",
+        borderRadius: "10px",
+        border: "none",
+        padding: "5px 30px",
+      };
+      buttonText = "Draft";
+    }
+
+    return (
+      <table className="table mob-table" key={index}>
+        <tbody>
+          <tr>
+            <td className="col-lg-2 rr zz">
+              {" "}
+              <strong>Title:</strong>
+              {item.title}
+            </td>
+            <td className="col-lg-2 zz">
+              {" "}
+              <strong>Category:</strong>
+              {item.category}
+            </td>
+            <td className="col-lg-3 but-lg">
+              <button className="btn" style={buttonStyle}>
+                {buttonText}
+              </button>
+            </td>
+            <td className="col-lg-3 time zz">
+              <strong>Data&Time:</strong>
+              {item.dateTime}
+            </td>
+            <td className="col-lg-3 but-mob">
+              <button className="btn" style={buttonStyle}>
+                {buttonText}
+              </button>
+            </td>
+            <td className="col-lg-2 rrr zz">
+              <div className="icons rrr">
+                <i class="far fa-trash-alt col-lg-6"></i>
+                <i class="far fa-edit col-lg-6"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  });
+  //===============================================================================
+  {
+    /* SECTION 1 */
+  }
   return (
-    <div className="container  mb-5 mt-3 ">
-    <HeaderPages/>
-      <div className="row ">
-        {/* Top Div */}
-        <div className="top-bar mb-0 mb-md-5 d-flex justify-content-between align-items-center mb-3">
-          <div className="top-info text-white mb-0 mb-md-5 ">
-            <div className="admin-panel-title fs-7 ">
-              Admin Panel
-              <div className="lineP "></div>
+    <div className='text-light'>
+    
+          <HeaderPages />
+          {/* ================================================================= */}
+          {/* SECTION2 */}
+          <div className="admin-banel container">
+            <div>
+              <span>Admin Panel</span>
+              <div className="line"></div>
+              <span>6th June 2023</span>
             </div>
-            <p className="panel-date mb-0 mb-md-5 fs-7">6th June 2023</p>
-          </div>
-          <div className="d-none d-lg-block">
-            <button className="btn btn-gold" onClick={movetoCreatejop}>Create New Article</button>
-
-          </div>
-        </div>
-
-        {/* Left Div */}
-        <div className="col-lg-3 col-md-12">
-                 <Sidenar/>
-                </div>
-        {/* Right Div */}
-        <div className="col-lg-9 col-md-12">
-          {/* Content of the right div */}
-          <div className="row align-items-center justify-content-between mb-3">
-            <div className="col-md-5 text-md-start text-center">
-              <div className="header-title">
-                Articles
-                <div className="linee mx-auto mx-md-0"></div>
-              </div>
+            <div className="btn-admin">
+              <button className="btn" style={{ backgroundColor: "#bf9b30" }}>
+                CREATE NEW ARTICLES
+              </button>
             </div>
-            {/* Search of right div */}
-            <div className="col-md-5 mt-3 mt-md-0 ">
-              {/* Search Div for Desktop */}
+          </div>
+          <div className="sec2 container">
+            <div class="left-nav col-sm-12 col-lg-3 det-left">
+             <Sidebar/>
+            </div>
+            <div className="container mt-4">
+              <div className="row">
+                <div className="col">
+                  <div className="container">
+                    <div className="row">
+                      <div className="show-phone-ul">
+                        <div className="row">
+                          <ul className="col">
+                            <li className="col-3">
+                              <h3>Users</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Articles</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Jobs</h3>
+                            </li>
+                            <li className="col-3">
+                              <h3>Courses</h3>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="choeses">
+                        <select
+                          style={{
+                            backgroundColor: "rgba(131, 128, 128,0.8)",
+                            color: "white",
+                          }}
+                          class="form-select btn se"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Students</option>
+                          <option value="1">Users</option>
+                          <option value="2">Articles</option>
+                          <option value="3">Jobs</option>
+                          <option value="3">Courses</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hheader container">
+                    <div className="line-hight">
+                      <h2 style={{ margin: "20px 0px", color:'white' }}>Articles</h2>
+                      <div className="linee d-none d-md-block mx-md-0"></div>
+                    </div>
+                  
+                    <div className="col-md-5 mt-3 mt-md-0">
               <div className="search-container d-none d-md-flex">
-                <input type="text" className="search-input" placeholder="Search In Users" />
-                <button className="search-btn"><i className="fas fa-search"></i></button>
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search In Users"
+                />
+                <button className="search-btn">
+                  <i className="fas fa-search"></i>
+                </button>
               </div>
-              {/* Menu for Mobile */}
-              <div className="d-block d-md-none ">
+              <div className="d-block d-md-none">
                 <div className="mobile-dropdown">
                   <button className="dropdown-btn">
-                    Published Articles
+                    Students
                     <i className="fas fa-chevron-down dropdown-arrow"></i>
                   </button>
                 </div>
               </div>
-
             </div>
-          </div>
-          {/* Table */}
-          <div className="table-responsive">
-            <table className="table table-dark articles-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Category</th>
-                  <th>Status</th>
-                  <th>Date & Time</th>
-                </tr>
-              </thead>
+                  </div>
+                  <table className="table table-mob">
+                    <thead>
+                      <tr>
+                        <td className="col-lg-2">Title</td>
+                        <td className="col-lg-2">Category</td>
+                        <td className="col-lg-3">Status</td>
+                        <td className="col-lg-3">Date & Time</td>
+                        <td className="col-lg-2">Delete & Edit</td>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
 
-              <tbody>
-                {articles.map((article) => (
-                  <>
-                    {/* table for  Mobile */}
-                    <tr className="d-block d-md-none px-0 w-100 col-12 mx-auto">
-                      <td className=' d-flex mx-auto w-100 mt-3' colSpan="5">
-                        <div className="box mb-3 row w-100 mx-auto mt-2 ">
-
-                          <div className="col-12 w-100 p-0 mx-auto ">
-                            <div className="d-flex justify-content-between align-items-center">
-                              <h6 className='fw-bold fs-6'>Title:</h6>
-
-                              <span
-                                className={`${article.status === 'Published' ? 'bg-primary' : 'bg-grey'} ButtonsTable fs-6 fw-medium text-center py-1`} style={{ width: '35%' }}>
-                                {article.status}
-                              </span>
-                            </div>
-
-                            <p className="mt-2 mb-0 fs-5 fw-lighter">{article.title}</p>
-                          </div>
-
-                          <div className="col-5 mt-3 p-0">
-                            <h6 className="fw-bold fs-6">Category:</h6>
-                            <p className=" fw-lighter fs-6">{article.category}</p>
-                          </div>
-
-                          <div className="col-7 mt-3  p-0 d-flex flex-column justify-content-end align-items-end">
-                            <h6 className=' fw-bold text-start me-4  fs-6'>Date & Time:</h6>
-                            <p className="text-start fs-6 fw-lighter ">
-                              {`${article.dateTime.split(' ')[0]} ${article.dateTime.split(' ')[1]} ${article.dateTime.split(' ')[2]}`}<br />
-                              {`${article.dateTime.split(' ')[3]} ${article.dateTime.split(' ')[4]}`}
-                            </p>
-                          </div>
-
-                          <div className='text-end'>
-                            <button className="btn-act me-3"><i className="fas fa-edit"></i></button>
-                            <button className="btn-act"><i className="fas fa-trash-alt"></i></button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-
-
-                    {/* table for big labtop & computer */}
-                    <tr className="d-none  d-md-table-row ">
-                      <td data-label="Title">{article.title}</td>
-                      <td data-label="Category">{article.category}</td>
-                      <td data-label="Status" className="d-none d-md-table-cell">
-                        <span className={`${article.status === 'Published' ? 'bg-primary' : 'bg-grey'} ButtonsTable`}>
-                          {article.status}
-                        </span>
-                      </td>
-                      <td data-label="Date & Time">
-                        <span className="date-time">
-                          {`${article.dateTime.split(' ')[0]} ${article.dateTime.split(' ')[1]} ${article.dateTime.split(' ')[2]}`}<br />
-                          {`${article.dateTime.split(' ')[3]} ${article.dateTime.split(' ')[4]}`}
-                        </span>
-                      </td>
-                      <td className="text-end">
-                        <div className="action-buttons">
-                          <button className="me-1 btn-act"><i className="fas fa-edit"></i></button>
-                          <button className="btn-act"><i className="fas fa-trash-alt"></i></button>
-                        </div>
-                      </td>
-                    </tr>
-                  </>
-                ))}
-
-              </tbody>
-            </table>
-          </div>
-
-          {/* Pagination */}
-          <div className="pagination">
+              <div className=" push">
+                {TdItem}
+                <div className="btn-admin-mob">
+                  <button
+                    className="btn"
+                    style={{ backgroundColor: "#bf9b30" }}
+                  >
+                    CREATE NEW ARTICLES
+                  </button>
+                </div>
+              </div>
+              <div className="pagination mt-4">
             <a href="#" className="arrow">
-              <i className="fas fa-chevron-left" style={{ color: '#BF9530' }}></i>
+              <i
+                className="fas fa-chevron-left"
+                style={{ color: "#BF9530" }}
+              ></i>
             </a>
 
             <a href="#">1</a>
@@ -170,19 +219,20 @@ const Articles = () => {
             <a href="#">3</a>
             <span>.....</span>
             <a href="#" className="arrow">
-              <i className="fas fa-chevron-right" style={{ color: '#BF9530' }}></i>
+              <i
+                className="fas fa-chevron-right"
+                style={{ color: "#BF9530" }}
+              ></i>
             </a>
-
           </div>
-
-          {/* Button at the bottom */}
-          <div className="d-block d-lg-none text-center  d-md-flex justify-content-md-end ">
-            <button className="btn-gold w-100 mt-5">Create New Article</button>
+            </div>
+            
           </div>
+          {/* =========================================================================== */}
+          
+     <Footer/>
         </div>
-      </div>
-      <Footer/>
-    </div>
+     
   );
 };
 

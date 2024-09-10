@@ -91,36 +91,14 @@
 }
 /* ======================================= */
 
-.all-project {
-  height: 100vh;
-  background-image: url(../../image/secondary_background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Hide horizontal scrolling */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-}
+
 .admin-banel {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
 
-.opicity {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  overflow-y: auto;
-}
+
 
 .hheader {
   display: flex;
@@ -140,6 +118,17 @@
   background-color: #bf9b30;
   margin: 10px 30px;
   display: block;
+}
+.linee {
+  width: 3rem;
+  height: 0.125rem;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+  margin-top: 0.3rem;
+}
+
+.line-hight:hover .linee{
+  width: 5rem;
 }
 
 .icons i {
@@ -242,29 +231,26 @@ textarea::placeholder {
   background-color: #bf9b30;
 }
 
-.search-container {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
+
 .seearch input {
   padding: 11px 70px;
   background-color: rgb(128, 128, 128, 0.5);
   border: 0;
   color: white;
   border-top-right-radius: 0;
+  width: 70%;
   border-bottom-right-radius: 0;
 }
 .search-icon {
   position: absolute;
-  left: 10px;
+  right:90%;
   top: 50%;
   transform: translateY(-50%);
   color: #bf9b30;
   pointer-events: none;
 }
 
-.btn-admiin button {
+.btn-admin button {
   padding: 10px 50px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -331,8 +317,10 @@ label {
   background-color: #333;
   color: #fff;
   border: none;
+  width: 100%;
   border-radius: 5px;
-  padding: 10px;
+  padding: 11px 70px;
+
 }
 .tob-cont-inputs input {
   background-color: #222;

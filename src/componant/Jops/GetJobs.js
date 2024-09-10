@@ -4,6 +4,7 @@ import {useNavigate,} from "react-router-dom";
 import HeaderPages from "../HeaderPages";
 import Gethobdata from '../../Data/GetJobsData'
 import './Badry.css'
+import Footer from "../Footer";
 function GetJobs() {
   const navigate = useNavigate();
 
@@ -101,9 +102,8 @@ function GetJobs() {
   };
 
   return (
-    <div>
-      <div className="all-project">
-        <div className="opicity">
+    <div className="text-light">
+      
           <HeaderPages />
           {/* ================================================================= */}
           {/* SECTION2 */}
@@ -121,13 +121,13 @@ function GetJobs() {
                 Here you can find your bestmatch <br />
                 between 1000s of updated and available positions.
               </p>
-              <div className="line"></div>
+              <div className="linee d-none d-md-block mx-md-0"></div>
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">
-                <div className="search-container">
+                <div className="sarch-container">
                   <input
-                    className="form form-control"
+                    className=" form form-control"
                     type="text"
                     placeholder="Search for a job"
                   />
@@ -135,7 +135,7 @@ function GetJobs() {
                 </div>
               </div>
 
-              <div className="btn-admiin">
+              <div className="btn-admin">
                 <button className="btn" style={{ backgroundColor: "#bf9b30" }}>
                   SEARCH
                 </button>
@@ -264,10 +264,9 @@ function GetJobs() {
               <div className="col-lg-8 right-cont-body">{JobItem}</div>
             </div>
           </div>
-  
+  <Footer/>
         </div>
-      </div>
-    </div>
+    
   );
 }
 

@@ -75,9 +75,8 @@ function Exam() {
     );
   });
   return (
-    <div>
-      <div className="all-project">
-        <div className="opicity">
+    <div className="text-light">
+  
           <HeaderPages/>
           {/* ================================================================= */}
           {/* SECTION2 */}
@@ -173,8 +172,7 @@ function Exam() {
           </div>
           
        <Footer/>
-        </div>
-      </div>
+        
     </div>
   );
 }

@@ -8,12 +8,12 @@ import Footer from '../Footer';
 
 function Addarticle() {
   return (
-    <div className='bg1 mb-5 '>
-       <div className='text-white overLay1 '>
+    <div className='text-light'>
+       
     <HeaderPages/>
       
        <div className="container   mt-5 ">
-        <div className=' pt-5 mt-5 pb-2'>
+        <div className=' pt-5 mt-5 mb-5'>
                 <h4 className='textGray cap txt'>Create New Artical</h4>
                  <div className="line1 mb-2 " >
                  </div>
@@ -65,15 +65,16 @@ function Addarticle() {
     </div>
   </div>
 
-  <div className="mb-3">
+  <div className="mb-3 col-12">
     <label htmlFor="textArea" className="form-label cap capli">Content</label>
     <textarea
       className="form-control bg-gray border border-0 "
       id="textArea"
       name="textArea"
       rows="3"
+      
       style={{
-        transition: 'background-color 0.3s ease',
+        transition: 'background-color 0.3s ease', padding:'100px'
       }}
     />
   </div>
@@ -103,7 +104,7 @@ function Addarticle() {
        <Footer/>
        </div>
        </div>
-       </div>
+       
        
 
 

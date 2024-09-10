@@ -5,7 +5,7 @@ function Homepage() {
   return (
     <div className=' '>
    <div className='bg  '>
-<div className='text-white overLay '>
+<div className='text-light overLay '>
 <HeaderPages/>
 
 <div className='move'>

@@ -7,7 +7,7 @@ function CategoryDropdown() {
 
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 col-lg-12">
       <label htmlFor="categorySelect" className="form-label cap capli">Category</label>
       <select
         id="categorySelect"

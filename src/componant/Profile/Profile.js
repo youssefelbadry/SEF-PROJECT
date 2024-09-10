@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../HeaderPages";
 import { useNavigate } from "react-router-dom";
+import HeaderPages from "../HeaderPages";
+import Footer from "../Footer";
 function Profile() {
     const navigate = useNavigate();
 
@@ -10,10 +12,9 @@ function Profile() {
   }
   return (
     
-    <div>
-      <div className="all-project">
-        <div className="opicity">
-          <Header />
+    <div className="text-light">
+    
+          <HeaderPages />
           {/* ================================================================= */}
           {/* SECTION2 */}
           <div className="admin-banel container">
@@ -160,10 +161,9 @@ function Profile() {
               </div>
             </div>
           </div>
-       
+       <Footer/>
         </div>
-      </div>
-    </div>
+   
   );
 }
 
