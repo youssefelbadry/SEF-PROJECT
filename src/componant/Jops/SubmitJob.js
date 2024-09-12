@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Badry.css'
 import Header from "../HeaderPages";
+import BarAdmin from "../BarAdmin";
+import BarStudent from "../BarStudent";
 
 function SubmitJob() {
   // ===============================================
@@ -37,6 +39,7 @@ function SubmitJob() {
 
   return (
     <div>
+    <BarStudent/>
       <div className="all-project">
         <div className="opicity">
           <Header />
@@ -60,11 +63,12 @@ function SubmitJob() {
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">
-                <div className="search-container">
+                <div className="sarch-container">
                   <input
-                    className="form form-control"
+                    className=" form form-control"
                     type="text"
                     placeholder="Search for a job"
+                    style={{padding:'11px 82px'}}
                   />
                   <i class="fas fa-search search-icon"></i>
                 </div>

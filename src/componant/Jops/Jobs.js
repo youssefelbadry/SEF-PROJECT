@@ -4,6 +4,7 @@ import JospsData from "../../Data/jobs";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
 import Sidebar from "../sidebar";
+import BarAdmin from "../BarAdmin";
 const Jobs = () => {
   const navigate = useNavigate();
 
@@ -127,6 +128,8 @@ const Jobs = () => {
     );
   });
   return (
+    <div>
+      <BarAdmin/>
     <div className="container mt-3 mb-5 text-light">
       <HeaderPages />
       <div className="row">
@@ -141,7 +144,7 @@ const Jobs = () => {
           </div>
           <div className="d-none d-lg-block">
             <button className="btn btn-gold" onClick={movetoCreatejop}>
-              Create Job
+              CREATE NEW JOB
             </button>
           </div>
         </div>
@@ -247,6 +250,7 @@ const Jobs = () => {
           </div>
       </div>
       <Footer />
+    </div>
     </div>
   );
 };

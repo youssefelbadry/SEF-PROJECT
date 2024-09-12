@@ -1,6 +1,7 @@
 import React from 'react';
 import MainBusiness from './MainBusiness';
 import SubcribeSection from './Subscrib';
+import Bar from '../Bar';
 
 
 const BusinessArtical = () => {
@@ -9,7 +10,6 @@ const BusinessArtical = () => {
   return (
     
  <>
- 
  <div className='mt-2  '>
    
    <div className='bg1 mb-5 '>

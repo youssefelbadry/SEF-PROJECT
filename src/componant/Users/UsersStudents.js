@@ -3,13 +3,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import BarAdmin from "../BarAdmin";
 
 const UsersStudents = () => {
   const navigate = useNavigate();
 
   function movetoCreatejop(e) {
     e.preventDefault();
-    navigate("/AddUser"); // Navigate to the JobForm page
+    navigate("/Certific"); // Navigate to the JobForm page
   }
   const users = [
     {
@@ -112,6 +113,8 @@ const UsersStudents = () => {
   });
   
   return (
+    <div>
+      <BarAdmin/>
     <div className="text-light">
         <HeaderPages/>
     <div className="container mt-3 mb-5">
@@ -277,6 +280,8 @@ const UsersStudents = () => {
           </div>
           </div>
           </div>
+          <Footer/>
+    </div>
     </div>
     
   );

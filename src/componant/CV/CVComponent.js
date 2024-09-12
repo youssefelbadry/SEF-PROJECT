@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import { CVPreview } from './CvPreview';
+import  CVPreview  from './CvPreview';
 //npm install react-to-print
 
-const CVComponent = () => {
+const CvComponent = () => {
     const componentRef = useRef();
 
     const handlePrint = useReactToPrint({
@@ -22,4 +22,4 @@ const CVComponent = () => {
     );
 };
 
-export default CVComponent;
+export default CvComponent;

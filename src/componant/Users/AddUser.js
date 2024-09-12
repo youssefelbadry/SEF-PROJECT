@@ -2,9 +2,19 @@ import React from "react";
 import Sidenar from "../sidebar";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import { useNavigate } from "react-router-dom";
+import BarAdmin from "../BarAdmin";
 
 function AddUser() {
+  const navigate = useNavigate();
+
+  function movetouserstu(e) {
+    e.preventDefault();
+    navigate("/Users"); // Navigate to the JobForm page
+  }
   return (
+    <div>
+      <BarAdmin/>
     <div>
       <HeaderPages/>
     <div className="container">
@@ -34,7 +44,7 @@ function AddUser() {
               </div>
             </div>
             <div className=" col-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0">
-              <button className="btn btn-gold px-5 d-none d-md-block">
+              <button className="btn btn-gold px-5 d-none d-md-block" onClick={movetouserstu}>
                 Publish
               </button>
             </div>
@@ -160,6 +170,7 @@ function AddUser() {
         </div>
       </div>
       <Footer/>
+    </div>
     </div>
     </div>
   );

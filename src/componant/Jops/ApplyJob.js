@@ -3,6 +3,8 @@ import Header from "../HeaderPages";
 import "./Badry.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
+import BarAdmin from "../BarAdmin";
+import BarStudent from "../BarStudent";
 
 function ApplyJob() {
   const navigate = useNavigate();
@@ -43,6 +45,7 @@ function ApplyJob() {
 
   return (
     <div>
+    <BarStudent/>
       <div className="all-project">
         <div className="opicity">
           <Header />
@@ -66,11 +69,12 @@ function ApplyJob() {
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">
-                <div className="search-container">
+                <div className="sarch-container">
                   <input
-                    className="form form-control"
+                    className=" form form-control"
                     type="text"
                     placeholder="Search for a job"
+                    style={{padding:'11px 52px'}}
                   />
                   <i class="fas fa-search search-icon"></i>
                 </div>

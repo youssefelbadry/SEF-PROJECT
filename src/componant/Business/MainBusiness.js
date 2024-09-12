@@ -2,9 +2,12 @@ import React from "react";
 import { Business } from "../../Data/Business";
 import HeaderPages from "../HeaderPages";
 import Subscrib from "./Subscrib";
+import Bar from "../Bar";
 
 const MainBusiness = () => {
   return (
+    <div>
+    <Bar/>
     <div className="text-light bg-container">
     <HeaderPages/>
       <div className="container  position-relative mb-5 ">
@@ -55,6 +58,7 @@ const MainBusiness = () => {
         </div>
       </div>
       <Subscrib/>
+    </div>
     </div>
   );
 };

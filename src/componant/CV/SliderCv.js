@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-export const Slider = ({ handleSlideChange, activeForm }) => {
+ const SliderCv = ({ handleSlideChange, activeForm }) => {
   const steps = [
     { step: 0, label: 'MAIN INFORMATION' },
     { step: 1, label: 'SKILLS' },
@@ -96,3 +95,4 @@ export const Slider = ({ handleSlideChange, activeForm }) => {
 
   );
 };
+export default SliderCv

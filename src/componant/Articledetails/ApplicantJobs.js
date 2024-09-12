@@ -3,6 +3,8 @@ import React from "react";
 //remove  npm install styled-components
 import Sidenar from "../sidebar";
 import Footer from "../Footer";
+import HeaderPages from "../HeaderPages";
+import BarAdmin from "../BarAdmin";
 
 const ApplicantJobs = () => {
   const applications = [
@@ -45,7 +47,10 @@ const ApplicantJobs = () => {
   ];
 
   return (
+    <div>
+      <BarAdmin/>
     <div className="container mt-3 mb-5 ">
+    <HeaderPages/>
       <div className="row">
         <div className="top-bar mb-0 mb-md-5 d-flex justify-content-between align-items-center mb-3">
           <div className="top-info text-white mb-0 mb-md-5 ">
@@ -154,7 +159,9 @@ const ApplicantJobs = () => {
           </a>
         </div>
       </div>
-      <Footer />
+    </div>
+    <Footer />
+
     </div>
   );
 };

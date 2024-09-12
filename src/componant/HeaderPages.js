@@ -1,7 +1,16 @@
 import React from "react";
 import logo from "../image/seff_logo_transparent.png";
+import { useNavigate } from 'react-router-dom';
 
 function HeaderPages() {
+
+  const navigate = useNavigate();
+
+  function movetoCreateArticals(e) {
+      e.preventDefault();
+      navigate('/Addarticle'); // Navigate to the JobForm page
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg sticky-top navbar-custom navvv">

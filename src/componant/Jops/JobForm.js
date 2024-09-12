@@ -2,6 +2,7 @@ import React, { useReducer, useEffect, useCallback } from "react";
 import axios from "axios";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import BarAdmin from "../BarAdmin";
 
 // Reducer function for form data
 const formDataReducer = (state, action) => {
@@ -144,6 +145,8 @@ const JobForm = () => {
   }, [formData]);
 
   return (
+    <div>
+      <BarAdmin/>
     <div>
       <HeaderPages />
 
@@ -696,7 +699,8 @@ const JobForm = () => {
           </div>
         </div>
         <Footer/>
-      </div>
+    </div>
+    </div>
     </div>
   );
 };

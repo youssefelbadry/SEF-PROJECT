@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import { useNavigate } from "react-router-dom";
+import BarAdmin from "../BarAdmin";
+import BarStudent from "../BarStudent";
 
 function Exam() {
     const ExamData = [
@@ -74,11 +77,19 @@ function Exam() {
       </div>
     );
   });
+  const navigate = useNavigate();
+
+  function movetoCreatejop(e) {
+    e.preventDefault();
+    navigate("/examresult"); // Navigate to the JobForm page
+  }
   return (
+    <div>
+      <BarStudent/>
     <div className="text-light">
   
           <HeaderPages/>
-          {/* ================================================================= */}
+          {/* ================================================================ */}
           {/* SECTION2 */}
           <div className="admin-banel container">
             <div>
@@ -134,8 +145,8 @@ function Exam() {
                   </div>
 
                   <div className="letter--5">
-                    <a href="home.html">
-                      <button className="btn btn-secondary">JOIN EXAM</button>
+                    <a >
+                      <button className="btn btn-secondary" onClick={movetoCreatejop}>JOIN EXAM</button>
                     </a>
                   </div>
                 </div>
@@ -172,6 +183,7 @@ function Exam() {
           </div>
           
        <Footer/>
+    </div>
         
     </div>
   );

@@ -4,8 +4,11 @@ import { DataSec1 } from "../../Data/dataSec1";
 import Titlee from "./titleBusiness";
 import Section3 from "./section3";
 import HeaderPages from "../HeaderPages";
+import Bar from "../Bar";
 const SecBusiness = () => {
   return (
+    <div>
+    <Bar/>
     <div className="text-light">
       <HeaderPages />
       <div className="container pb-5 ">
@@ -93,6 +96,8 @@ const SecBusiness = () => {
 
       {/* <div><SubcribeSection/></div> */}
     </div>
+    </div>
+
   );
 };
 

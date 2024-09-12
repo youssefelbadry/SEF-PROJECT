@@ -6,11 +6,12 @@ import HeaderPages from '../HeaderPages';
 import Footer from '../Footer';
 import logo from "../../image/seff_logo_transparent.png";
 import Sidebar from '../sidebar';
+import BarAdmin from '../BarAdmin';
 
 const Articles = () => {
   const navigate = useNavigate();
 
-  function movetoCreatejop(e) {
+  function movetoCreateArticals(e) {
       e.preventDefault();
       navigate('/Addarticle'); // Navigate to the JobForm page
   }
@@ -92,6 +93,8 @@ const Articles = () => {
     /* SECTION 1 */
   }
   return (
+    <div>
+    <BarAdmin/>
     <div className='text-light'>
     
           <HeaderPages />
@@ -104,7 +107,7 @@ const Articles = () => {
               <span>6th June 2023</span>
             </div>
             <div className="btn-admin">
-              <button className="btn" style={{ backgroundColor: "#bf9b30" }}>
+              <button className="btn" style={{ backgroundColor: "#bf9b30" }} onClick={movetoCreateArticals}>
                 CREATE NEW ARTICLES
               </button>
             </div>
@@ -232,7 +235,7 @@ const Articles = () => {
           
      <Footer/>
         </div>
-     
+        </div>
   );
 };
 

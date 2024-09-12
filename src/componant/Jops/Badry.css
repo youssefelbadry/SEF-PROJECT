@@ -47,7 +47,7 @@
 }
 .bar {
   height: auto;
-  background-color: black;
+  background-color: rgba(0 , 0 ,0 ,0.85);
 }
 .aaa a {
   color: white;
@@ -319,7 +319,6 @@ label {
   border: none;
   width: 100%;
   border-radius: 5px;
-  padding: 11px 70px;
 
 }
 .tob-cont-inputs input {

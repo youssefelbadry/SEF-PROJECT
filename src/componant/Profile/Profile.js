@@ -3,6 +3,7 @@ import Header from "../HeaderPages";
 import { useNavigate } from "react-router-dom";
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import BarStudent from "../BarStudent";
 function Profile() {
     const navigate = useNavigate();
 
@@ -11,7 +12,9 @@ function Profile() {
     navigate("/EditProfile"); // Navigate to the JobForm page
   }
   return (
-    
+    <div>
+      <BarStudent />
+
     <div className="text-light">
     
           <HeaderPages />
@@ -162,6 +165,7 @@ function Profile() {
             </div>
           </div>
        <Footer/>
+        </div>
         </div>
    
   );

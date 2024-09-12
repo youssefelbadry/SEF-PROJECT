@@ -1,9 +1,13 @@
 import React from 'react'
 import Section from './section'
 import HeaderPages from '../HeaderPages'
+import Bar from '../Bar'
 function Homepage() {
+
+   
   return (
     <div className=' '>
+    <Bar/>
    <div className='bg  '>
 <div className='text-light overLay '>
 <HeaderPages/>

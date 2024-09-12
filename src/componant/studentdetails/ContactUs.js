@@ -2,10 +2,12 @@ import React from 'react';
 
 import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
+import Bar from '../Bar';
 // ContactUs Component
 const ContactUs = () => {
   return (
-   
+   <div>
+    <Bar/>
 
       <div >
       <HeaderPages/>
@@ -97,6 +99,8 @@ const ContactUs = () => {
         </div>
         <Footer/>
       </div>
+   </div>
+
   );
 }
 

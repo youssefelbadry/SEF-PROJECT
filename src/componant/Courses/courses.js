@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Sidenar from '../sidebar';
 import HeaderPages from '../HeaderPages';
 import Footer from '../Footer';
+import BarAdmin from '../BarAdmin';
 
 const Courses = () => {
     const courses = [
@@ -20,6 +21,8 @@ const Courses = () => {
         navigate('/Addcoursesdetails'); // Navigate to the JobForm page
     }
     return (
+        <div>
+            <BarAdmin/>
         <div className="container mt-3 mb-5">
             <HeaderPages/>
             {/* Top Div */}
@@ -175,6 +178,7 @@ const Courses = () => {
                 </div>
             </div>
             <Footer/>
+        </div>
         </div>
     );
 };

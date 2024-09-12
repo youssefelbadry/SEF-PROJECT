@@ -5,6 +5,8 @@ import HeaderPages from "../HeaderPages";
 import Gethobdata from '../../Data/GetJobsData'
 import './Badry.css'
 import Footer from "../Footer";
+import BarAdmin from "../BarAdmin";
+import BarStudent from "../BarStudent";
 function GetJobs() {
   const navigate = useNavigate();
 
@@ -102,6 +104,8 @@ function GetJobs() {
   };
 
   return (
+    <div>
+      <BarStudent/>
     <div className="text-light">
       
           <HeaderPages />
@@ -130,6 +134,7 @@ function GetJobs() {
                     className=" form form-control"
                     type="text"
                     placeholder="Search for a job"
+                    style={{padding:'11px 52px'}}
                   />
                   <i class="fas fa-search search-icon"></i>
                 </div>
@@ -265,6 +270,7 @@ function GetJobs() {
             </div>
           </div>
   <Footer/>
+        </div>
         </div>
     
   );

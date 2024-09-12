@@ -3,10 +3,20 @@ import Sidenar from "../sidebar";
 import Catogerycourses from "./Catogerycourses";
 import FileUpload from "../Articledetails/fileUpload";
 import HeaderPages from "../HeaderPages";
+import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
+import BarAdmin from "../BarAdmin";
 
 function Certific() {
+  const navigate = useNavigate();
+
+  function movetoCreatejop(e) {
+    e.preventDefault();
+    navigate("/UserStudents"); // Navigate to the JobForm page
+  }
   return (
+    <div>
+      <BarAdmin/>
     <div>
       <HeaderPages />
       <div className="container">
@@ -116,6 +126,7 @@ function Certific() {
                 type="submit"
                 style={{ fontWeight: "500" }}
                 className="btn mt-2 col-md-2 col-12 btn1 ms-1 text-white py-2 px-2"
+                onClick={movetoCreatejop}
               >
                 UPLOAD
               </button>
@@ -124,6 +135,7 @@ function Certific() {
         </div>
         <Footer />
       </div>
+    </div>
     </div>
   );
 }

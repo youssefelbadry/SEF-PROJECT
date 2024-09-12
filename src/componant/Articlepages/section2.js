@@ -1,7 +1,15 @@
 import { React } from "react";
 import { Data } from "../../Data/Articledata/data";
+import { useNavigate } from "react-router-dom";
 
 const Section2 = () => {
+  const navigate = useNavigate();
+
+  const handleLgo = () => {
+        
+        
+    navigate('/main')
+};
   return (
     <div className="text-white mt-5 bg-container">
       <div className="container ">
@@ -27,8 +35,8 @@ const Section2 = () => {
                     <span className="align-self-center ps-2">{item.time} </span>
                   </div>
                   <div className="d-flex">
-                    <p className=" p-3 textGray">{item.text}</p>
-                    <span className="text-dark align-self-center  font ">
+                    <p className=" p-3 textGray" >{item.text}</p>
+                    <span className="text-dark align-self-center  font " onClick={handleLgo}>
                       {item.next}
                     </span>
                   </div>

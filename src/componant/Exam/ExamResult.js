@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import HeaderPages from "../HeaderPages";
+import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
+import BarStudent from "../BarStudent";
 // ExamResult Component
 const ExamResult = () => {
   const outerCircleRef = useRef(null);
@@ -38,9 +40,17 @@ const ExamResult = () => {
     setProgress((19 / 20) * 100); // 19 out of 20 = 95%
   }, []);
 
+  const navigate = useNavigate();
+
+  function movetoCreatejop(e) {
+    e.preventDefault();
+    navigate("/onlineExam"); // Navigate to the JobForm page
+  }
+
   return (
-    <div className="all-project">
-      <div className="opicity">
+    <div className="text-white">
+    <BarStudent/>
+      <div >
         <HeaderPages />
         <div className="container mt-4">
           <div className="date-header" style={{ marginTop: "50px" }}>
@@ -142,7 +152,7 @@ const ExamResult = () => {
                 </div>
 
                 <div className="right-tob-online">
-                  <button className="btn btn-warning">VIEW ANSWERS</button>
+                  <button className="btn btn-warning" onClick={movetoCreatejop}>VIEW ANSWERS</button>
                 </div>
               </div>
 

@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 // Create the context
 export const FormContext = createContext();
 
-export const FormProvider = ({ children }) => {
+ const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -12,13 +12,32 @@ export const FormProvider = ({ children }) => {
     city: '',
     phone: '',
     email: '',
-    honorAward: '', 
-    hobbies: '',     
-    linkedIn: '',   
-    github: '',    
-    website: '' ,     
-    photo: '' , 
-    skills: []
+    honorAward: [
+      { awardName: '', year: '', description: '' }, 
+    ],
+    hobbies: '',
+    website: '',
+    photo: '',
+    skills: [],
+    experience: [
+      {
+        companyName: '',
+        position: '',
+        fromDate: '',
+        toDate: '',
+        companyLogo: '',
+        description: '',
+      },
+    ],
+    education: [
+      {
+        organizationName: '',
+        degree: '',
+        fromDate: '',
+        toDate: '',
+        description: '',
+      }
+    ],
   });
 
   return (
@@ -27,3 +46,4 @@ export const FormProvider = ({ children }) => {
     </FormContext.Provider>
   );
 };
+export default FormProvider

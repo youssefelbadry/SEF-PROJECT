@@ -10,7 +10,7 @@ function Registerd() {
         <div className='col-md-6'>
           <h2>Registered Courses</h2>
           {detailscode.map((course, index) => (
-            <div className='col-12 col-md-9 mt-3 p-3 Registerdcoursecard' key={index}>
+            <div className='col-12 col-md-11 mt-3 p-3 Registerdcoursecard' key={index}>
               <div className='p-1'>
                 <h2>{course.coursename}</h2>
                 <h5>
@@ -29,9 +29,9 @@ function Registerd() {
         </div>
 
         {/* Upcoming Exams Section */}
-        <div className='col-md-6 p-2'>
+        <div className='col-md-6 ' style={{marginLeft:'auto'}}>
           <h2 >Upcoming Exams</h2>
-          <div className='row   col-sm-12 col-md-11 '>
+          <div className='row   col-sm-12 col-md-12 '>
             <div className='d-flex my-2   col-md-2 col-3 flex-column align-items-center p-3  p-md-1  '
              style={{ color: 'white', position: 'relative' , height:'fit-content' , backgroundColor:'black'}}>
               <div className='text-center  mb-2'>
