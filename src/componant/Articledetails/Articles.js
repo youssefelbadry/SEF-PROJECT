@@ -7,6 +7,8 @@ import Footer from '../Footer';
 import logo from "../../image/seff_logo_transparent.png";
 import Sidebar from '../sidebar';
 import BarAdmin from '../BarAdmin';
+import UlPhone from '../UlPhone';
+import ChoosePhone from '../ChoosePhone';
 
 const Articles = () => {
   const navigate = useNavigate();
@@ -121,40 +123,8 @@ const Articles = () => {
                 <div className="col">
                   <div className="container">
                     <div className="row">
-                      <div className="show-phone-ul">
-                        <div className="row">
-                          <ul className="col">
-                            <li className="col-3">
-                              <h3>Users</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Articles</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Jobs</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Courses</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="choeses">
-                        <select
-                          style={{
-                            backgroundColor: "rgba(131, 128, 128,0.8)",
-                            color: "white",
-                          }}
-                          class="form-select btn se"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Students</option>
-                          <option value="1">Users</option>
-                          <option value="2">Articles</option>
-                          <option value="3">Jobs</option>
-                          <option value="3">Courses</option>
-                        </select>
-                      </div>
+                     <UlPhone/>
+                    <ChoosePhone/>
                     </div>
                   </div>
                   <div className="hheader container">

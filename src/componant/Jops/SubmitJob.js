@@ -1,10 +1,11 @@
 import React, { useState } from "react";
- import logo from "../../image/seff_logo_transparent.png";
+import logo from "../../image/seff_logo_transparent.png";
 import { useNavigate } from "react-router-dom";
-import './Badry.css'
+import "./Badry.css";
 import Header from "../HeaderPages";
 import BarAdmin from "../BarAdmin";
 import BarStudent from "../BarStudent";
+import Footer from "../Footer";
 
 function SubmitJob() {
   // ===============================================
@@ -39,8 +40,8 @@ function SubmitJob() {
 
   return (
     <div>
-    <BarStudent/>
-      <div className="all-project">
+      <BarStudent />
+      <div className="">
         <div className="opicity">
           <Header />
           {/* ================================================================= */}
@@ -63,12 +64,17 @@ function SubmitJob() {
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">
-                <div className="sarch-container">
+                <div className="">
                   <input
                     className=" form form-control"
                     type="text"
                     placeholder="Search for a job"
-                    style={{padding:'11px 82px'}}
+                    style={{
+                      padding: "11px 52px",
+                      backgroundColor: "rgba(54, 54, 54, 0.61)",
+                      border: "0",
+                      color: "white",
+                    }}
                   />
                   <i class="fas fa-search search-icon"></i>
                 </div>
@@ -243,10 +249,7 @@ function SubmitJob() {
                         </p>
                       </div>
                       <div className="tob-cont-inputs mt-4">
-                        <div
-                          className="form-group-email"
-                          
-                        >
+                        <div className="form-group-email">
                           <label>Email</label>
                           <input
                             type="email"
@@ -270,10 +273,7 @@ function SubmitJob() {
                       className="tob-cont-inputs mt-4"
                       style={{ justifyContent: "start" }}
                     >
-                      <div
-                        className="form-group-mobile"
-                       
-                      >
+                      <div className="form-group-mobile">
                         <label>Mobile Number</label>
                         <input
                           type="tel"
@@ -303,14 +303,11 @@ function SubmitJob() {
                       </div>
                     </div>
 
-                    <div
-                      className="mt-5 buutt"
-                      
-                    >
+                    <div className="mt-5 buutt">
                       <button
                         type="button"
                         className="btn px-5"
-                        style={{ backgroundColor: "gray", color:"white" }}
+                        style={{ backgroundColor: "gray", color: "white" }}
                       >
                         CANCEL
                       </button>
@@ -328,7 +325,7 @@ function SubmitJob() {
             </div>
           </div>
 
-        
+          <Footer />
         </div>
       </div>
     </div>

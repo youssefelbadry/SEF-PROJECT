@@ -7,7 +7,7 @@ function BarAdmin() {
     const handleLogout = () => {
         
         setTimeout(() => {
-            navigate('/login');
+            navigate('/');
         }, 1100); 
     };
 
@@ -28,18 +28,15 @@ function BarAdmin() {
   return (
     <div>
     <div className="">
-      <nav className="navbar navbar-expand-lg navbar-custom bar">
+      <nav className="navbar navbar-expand-lg navbar-custom bar baradmin">
         <div className="container">
         
           <div
-            className="collapse navbar-collapse "
+            className="collapse navbar-collapse bbaarradmin"
             id="basic-navbar-nav"
             style={{ display: "flex", justifyContent: "end" }}
           >
             <ul className="navbar-nav aaa admin">
-              
-              
-            </ul> <ul className="navbar-nav aaa admin">
             <li className="nav-item">
                 <a className="nav-link"  style={{cursor:'pointer'}} onClick={handleAdmin}>
                   ADMIN PANAL
@@ -50,15 +47,12 @@ function BarAdmin() {
                   PROFILE
                 </a>
               </li>
-            </ul> <ul className="navbar-nav aaa admin">
-              
-             
               <li className="nav-item">
                 <a className="nav-link"  style={{cursor:'pointer'}} onClick={handleLogout}>
                   LOGOUT
                 </a>
               </li>
-            </ul>
+            </ul> 
           </div>
         </div>
       </nav>

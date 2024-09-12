@@ -553,6 +553,9 @@ label {
 /* ============================================================= */
 
 @media (max-width: 912px) {
+  .baradmin{
+    display: none;
+  }
   .barrrrr {
     display: none;
   }

@@ -6,6 +6,8 @@ import HeaderPages from "../HeaderPages";
 import Sidebar from "../sidebar";
 import Footer from "../Footer";
 import BarAdmin from "../BarAdmin";
+import UlPhone from "../UlPhone";
+import ChoosePhone from "../ChoosePhone";
 
 const Users = () => {
   const navigate = useNavigate();
@@ -312,40 +314,9 @@ const Users = () => {
               <div className="col">
                 <div className="container">
                   <div className="row">
-                    <div className="show-phone-ul">
-                      <div className="row">
-                        <ul className="col">
-                          <li className="col-3">
-                            <h3>Users</h3>
-                          </li>
-                          <li className="col-3">
-                            <h3>Articles</h3>
-                          </li>
-                          <li className="col-3">
-                            <h3>Jobs</h3>
-                          </li>
-                          <li className="col-3">
-                            <h3>Courses</h3>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="choeses">
-                      <select
-                        style={{
-                          backgroundColor: "rgba(131, 128, 128,0.8)",
-                          color: "white",
-                        }}
-                        class="form-select btn se"
-                        aria-label="Default select example"
-                      >
-                        <option selected>Students</option>
-                        <option value="1">Users</option>
-                        <option value="2">Articles</option>
-                        <option value="3">Jobs</option>
-                        <option value="3">Courses</option>
-                      </select>
-                    </div>
+                   <UlPhone/>
+                   <ChoosePhone/>
+
                   </div>
                 </div>
                 <div className="hheader container">
@@ -353,24 +324,7 @@ const Users = () => {
                     <h2 style={{ margin: "20px 30px" }}>Users</h2>
                     <div className="line"></div>
                   </div>
-                  {/* <div className="search">
-                    <div className="" md>
-                      <div
-                        controlId="floatingInputGrid"
-                        className=" form-floating"
-                      >
-                        <div className="search-container">
-                          <input
-                            className="form form-control"
-                            type="text"
-                            placeholder="Search"
-                            style={{ backgroundColor: "gray", border: "0" }}
-                          />
-                          <i class="fas fa-search search-icon"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+                
                   <div className="col-md-5 mt-3 mt-md-0">
                     <div className="search-container d-none d-md-flex">
                       <input
@@ -383,12 +337,7 @@ const Users = () => {
                       </button>
                     </div>
                     <div className="d-block d-md-none">
-                      <div className="mobile-dropdown">
-                        <button className="dropdown-btn">
-                          Students
-                          <i className="fas fa-chevron-down dropdown-arrow"></i>
-                        </button>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -432,6 +381,25 @@ const Users = () => {
                 </div>
               </div>
             </div>
+            <div className="pagination mt-4">
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-left"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <span>.....</span>
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-right"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+          </div>
           </div>
         </div>
         {/* =========================================================================== */}

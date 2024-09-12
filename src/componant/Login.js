@@ -33,8 +33,8 @@ const Login = () => {
     if (form.username === '' || form.password === '') {
       alert('Please Fill Your Data');
     } else if (
-      savedUsername.trim() === form.username.trim() &&
-      savedPassword.trim() === form.password.trim()
+      savedUsername === form.username &&
+      savedPassword === form.password
     ) {
       // Redirect to home page if username and password are correct
       setTimeout(() => {

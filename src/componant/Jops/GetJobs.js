@@ -129,12 +129,12 @@ function GetJobs() {
             </div>
             <div className="search">
               <div controlId="floatingInputGrid" className=" form-floating">
-                <div className="sarch-container">
+                <div className="">
                   <input
-                    className=" form form-control"
+                    className="  form-control"
                     type="text"
                     placeholder="Search for a job"
-                    style={{padding:'11px 52px'}}
+                    style={{padding:'11px 52px', backgroundColor:'rgba(54, 54, 54, 0.61)', border:'0', color:'white'}}
                   />
                   <i class="fas fa-search search-icon"></i>
                 </div>
@@ -148,7 +148,7 @@ function GetJobs() {
             </div>
           </div>
           {/* =========================================================================== */}
-          <div className="container contact-body">
+          <div className="container ">
             <div className="row">
               <div className="col-lg-4 left-cont-body">
                 <div className="filter-container">

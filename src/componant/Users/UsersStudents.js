@@ -279,6 +279,25 @@ const UsersStudents = () => {
             </div>
           </div>
           </div>
+          <div className="pagination mt-4">
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-left"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <span>.....</span>
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-right"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+          </div>
           </div>
           <Footer/>
     </div>

@@ -5,6 +5,8 @@ import HeaderPages from "../HeaderPages";
 import Footer from "../Footer";
 import Sidebar from "../sidebar";
 import BarAdmin from "../BarAdmin";
+import UlPhone from "../UlPhone";
+import ChoosePhone from "../ChoosePhone";
 const Jobs = () => {
   const navigate = useNavigate();
 
@@ -143,7 +145,7 @@ const Jobs = () => {
             <p className="panel-date mb-0 mb-md-5">6th June 2023</p>
           </div>
           <div className="d-none d-lg-block">
-            <button className="btn btn-gold" onClick={movetoCreatejop}>
+            <button className="btn btn-warning" style={{backgroundColor:'#bf9b30', color:'white'}} onClick={movetoCreatejop}>
               CREATE NEW JOB
             </button>
           </div>
@@ -158,40 +160,9 @@ const Jobs = () => {
                 <div className="col">
                   <div className="container">
                     <div className="row">
-                      <div className="show-phone-ul">
-                        <div className="row">
-                          <ul className="col">
-                            <li className="col-3">
-                              <h3>Users</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Articles</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Jobs</h3>
-                            </li>
-                            <li className="col-3">
-                              <h3>Courses</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="choeses">
-                        <select
-                          style={{
-                            backgroundColor: "rgba(131, 128, 128,0.8)",
-                            color: "white",
-                          }}
-                          class="form-select btn se"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Students</option>
-                          <option value="1">Users</option>
-                          <option value="2">Articles</option>
-                          <option value="3">Jobs</option>
-                          <option value="3">Courses</option>
-                        </select>
-                      </div>
+                     <UlPhone/>
+                     <ChoosePhone/>
+
                     </div>
                   </div>
                   <div className="hheader container">
@@ -246,11 +217,32 @@ const Jobs = () => {
                   </button>
                 </div>
               </div>
+              <div className="pagination mt-4">
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-left"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <span>.....</span>
+            <a href="#" className="arrow">
+              <i
+                className="fas fa-chevron-right"
+                style={{ color: "#BF9530" }}
+              ></i>
+            </a>
+          </div>
             </div>
+            
           </div>
       </div>
-      <Footer />
     </div>
+    <Footer />
+
     </div>
   );
 };

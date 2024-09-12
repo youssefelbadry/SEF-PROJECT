@@ -45,7 +45,7 @@ const ButtonGroupComponent = ({ componentRef, activeForm, setActiveForm }) => {
             <div>
             {activeForm === 7 && ( // show Download PDF button only on the last form
                 <div>
-                    <button className="btn btn-gold me-2 text-uppercase col-12 col-md-auto px-4 mt-2 mt-md-0" onClick={handlePrint}>
+                    <button className="btn btn-warning me-2 text-uppercase col-12 col-md-auto px-4 mt-2 mt-md-0" onClick={handlePrint}>
                         Download PDF
                     </button>
                 </div>
