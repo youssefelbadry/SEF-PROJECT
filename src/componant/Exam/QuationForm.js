@@ -247,7 +247,7 @@ const QuationForm = () => {
          <div className="mb-3 d-flex justify-content-end my-5 py-4   d-none d-md-flex" >
         
         <button type="button" className="btn btn-secondary text-white py-2 px-5"style={{fontWeight : "500"}} onClick={handleCancel}>CANCEL</button>
-        <button type="submit" style={{fontWeight : "500"}} className="btn btn1 ms-3 text-white py-2 px-5 " onClick={handleSave} >SUBMIT</button>
+        <button type="submit" style={{fontWeight : "500" , backgroundColor:'#bf9b30'}} className="btn btn1 ms-3 text-white py-2 px-5 " onClick={handleSave} >SUBMIT</button>
       </div>
       <div className='d-block d-md-none  mb-3  my-5 py-4'>
         <button type="button" className="btn w-100 btn-secondary text-white py-2 px-5 mb-3 "style={{fontWeight : "500"}} onClick={handleCancel}>CANCEL</button>

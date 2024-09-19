@@ -182,12 +182,7 @@ const Jobs = () => {
                 </button>
               </div>
               <div className="d-block d-md-none">
-                <div className="mobile-dropdown">
-                  <button className="dropdown-btn">
-                    Students
-                    <i className="fas fa-chevron-down dropdown-arrow"></i>
-                  </button>
-                </div>
+                
               </div>
             </div>
                   </div>

@@ -53,8 +53,8 @@ const ContactUs = () => {
               </div>
 
               {/* Right Div */}
-              <div className="form col-md-6">
-                <div className="card wow fadeInRight" data-wow-delay="0.3s">
+              <div className="form col-md-6" >
+                <div className="card wow fadeInRight" data-wow-delay="0.3s" style={{backgroundColor:'rgba(0,0,0,0.5)'}}>
                   <div className="card-body">
                     {/* Header */}
                     <div className="from-head">
@@ -94,7 +94,6 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Footer */}
           </div>
         </div>
         <Footer/>

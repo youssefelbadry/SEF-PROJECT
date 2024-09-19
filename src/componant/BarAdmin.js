@@ -34,7 +34,7 @@ function BarAdmin() {
           <div
             className="collapse navbar-collapse bbaarradmin"
             id="basic-navbar-nav"
-            style={{ display: "flex", justifyContent: "end" }}
+            
           >
             <ul className="navbar-nav aaa admin">
             <li className="nav-item">

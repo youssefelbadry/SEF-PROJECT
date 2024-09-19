@@ -97,23 +97,27 @@ const Articles = () => {
   return (
     <div>
     <BarAdmin/>
-    <div className='text-light'>
+    <div className='container mt-3 mb-5 text-light'>
     
           <HeaderPages />
           {/* ================================================================= */}
           {/* SECTION2 */}
-          <div className="admin-banel container">
-            <div>
-              <span>Admin Panel</span>
-              <div className="line"></div>
-              <span>6th June 2023</span>
+          <div className='row'>
+          <div className="top-bar mb-0 mb-md-5 d-flex justify-content-between align-items-center mb-3">
+          <div className="top-info text-white mb-0 mb-md-5 ">
+            <div className="admin-panel-title">
+              Admin Panel
+              <div className="lineP "></div>
             </div>
-            <div className="btn-admin">
-              <button className="btn" style={{ backgroundColor: "#bf9b30" }} onClick={movetoCreateArticals}>
-                CREATE NEW ARTICLES
-              </button>
-            </div>
+            <p className="panel-date mb-0 mb-md-5">6th June 2023</p>
           </div>
+          <div className="d-none d-lg-block">
+            <button className="btn btn-warning" style={{backgroundColor:'#bf9b30', color:'white'}} onClick={movetoCreateArticals}>
+            CREATE NEW ARTICLES
+
+            </button>
+          </div>
+        </div>
           <div className="sec2 container">
             <div class="left-nav col-sm-12 col-lg-3 det-left">
              <Sidebar/>
@@ -130,7 +134,8 @@ const Articles = () => {
                   <div className="hheader container">
                     <div className="line-hight">
                       <h2 style={{ margin: "20px 0px", color:'white' }}>Articles</h2>
-                      <div className="linee d-none d-md-block mx-md-0"></div>
+                    <div className="line"></div>
+                      
                     </div>
                   
                     <div className="col-md-5 mt-3 mt-md-0">
@@ -144,14 +149,7 @@ const Articles = () => {
                   <i className="fas fa-search"></i>
                 </button>
               </div>
-              <div className="d-block d-md-none">
-                <div className="mobile-dropdown">
-                  <button className="dropdown-btn">
-                    Students
-                    <i className="fas fa-chevron-down dropdown-arrow"></i>
-                  </button>
-                </div>
-              </div>
+              
             </div>
                   </div>
                   <table className="table table-mob">
@@ -199,12 +197,13 @@ const Articles = () => {
             </a>
           </div>
             </div>
-            
+            </div>
           </div>
+        </div>
+
           {/* =========================================================================== */}
           
      <Footer/>
-        </div>
         </div>
   );
 };

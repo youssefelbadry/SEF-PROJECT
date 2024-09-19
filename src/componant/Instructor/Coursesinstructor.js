@@ -45,7 +45,7 @@ function Coursesinstructor({ imgSrc, title, date, lessons }) {
        <h5> Lev.1</h5>
     </div>
     <div className="d-flex justify-content-end col-6 col-md-12">
-    <button className="btn btn-warning  d-flex justify-content-center align-items-center">
+    <button className="btn text-white  d-flex justify-content-center align-items-center" style={{backgroundColor:'#bf9b30'}}>
         View details
     </button>
 </div>

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 function ChoosePhone() {
-    const [activeItem, setActiveItem] = useState(null); // حالة لتتبع العنصر النشط
+    const [activeItem, setActiveItem] = useState(null); 
     const navigate = useNavigate();
     const location = useLocation();
   
-    // تحديث العنصر النشط بناءً على المسار الحالي
     useEffect(() => {
       if (location.pathname === "/Users") {
         setActiveItem("users");
@@ -18,7 +17,6 @@ function ChoosePhone() {
       }
     }, [location.pathname]);
   
-    // دالة لتحديث العنصر النشط بناءً على التحديد من الـ select
     const handleSelectChange = (event) => {
       const value = event.target.value;
       if (value === "1") {
@@ -46,7 +44,7 @@ function ChoosePhone() {
             }}
             className="form-select btn se"
             aria-label="Default select example"
-            onChange={handleSelectChange} // دالة التعامل مع التغيير
+            onChange={handleSelectChange} 
             value={activeItem === "users" ? "1" : activeItem === "articles" ? "2" : activeItem === "jobs" ? "3" : "4"}
           >
             <option value="1">Users</option>

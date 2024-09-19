@@ -342,7 +342,7 @@ body::before {
   border-left: 0.1875rem solid var(--primary-color);
 }
 
-.admin-panel-title {
+.aaa-panel-title {
   font-size: 0.9375rem;
   font-weight: bold;
   color: var(--font-color);
@@ -351,7 +351,7 @@ body::before {
   margin-bottom: 0.3125rem;
 }
 
-.admin-panel-title .lineP {
+.aaa-panel-title .lineP {
   width: 5rem;
   height: 0.1125rem;
   background-color: var(--primary-color);
@@ -440,54 +440,53 @@ body::before {
 /* Custom Logo Upload Styling */
 .custom-file-cv-upload,
 .custom-file-upload {
-    border: none; 
- 
+  border: none;
 
-    background-color: var(--background-color);
-    background-image: 
-      linear-gradient(to right, var(--primary-color) 50%, transparent 50%),
-      linear-gradient(to bottom, var(--primary-color) 50%, transparent 50%),
-      linear-gradient(to left, var(--primary-color) 50%, transparent 50%),
-      linear-gradient(to top, var(--primary-color) 50%, transparent 50%);
-      
-    background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px; /* حجم الخط والمسافة للخطوط اليمنى واليسرى */
-    background-position: top, right, bottom, left;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
- 
-  }
-  
-  
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+      to right,
+      var(--primary-color) 50%,
+      transparent 50%
+    ),
+    linear-gradient(to bottom, var(--primary-color) 50%, transparent 50%),
+    linear-gradient(to left, var(--primary-color) 50%, transparent 50%),
+    linear-gradient(to top, var(--primary-color) 50%, transparent 50%);
+
+  background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px; /* حجم الخط والمسافة للخطوط اليمنى واليسرى */
+  background-position: top, right, bottom, left;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+}
 
 .custom-file-upload label {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--font-color);
-    cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  cursor: pointer;
 }
 
 .custom-file-upload .upload-icon i {
-    font-size: 2.1875rem;
-    color: var(--primary-color);
-    margin-bottom: 0.625rem;
-    /* 10px */
+  font-size: 2.1875rem;
+  color: var(--primary-color);
+  margin-bottom: 0.625rem;
+  /* 10px */
 }
 
 .custom-file-upload span.text-warning {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 /* //links */
-.Iconslinks{
+.Iconslinks {
   background-color: transparent;
   box-shadow: none !important;
   outline: none !important;
   border: none;
   color: var(--primary-color);
   font-size: 16px;
-  }
+}
 footer {
   color: #ccc;
 }
@@ -793,7 +792,7 @@ footer a {
   justify-content: space-between;
   padding: 20px;
 }
-.admin-banel {
+.aaa-banel {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
@@ -919,17 +918,29 @@ strong {
 .letter-5 {
   visibility: hidden;
 }
-  
 
+.bbaarradmin {
+  display: flex;
+  justify-content: right;
+}
 /* ///////////////////// */
 @media (max-width: 990px) {
-  .baradmin ul {
-    margin: auto;
+  .bar {
+    display: none;
   }
- .baradmin{
-  width:100%;
-  margin: auto;
- }
+  .baradmin ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .baradmin {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+
   .textArea {
     margin-top: 0.625rem;
   }
@@ -952,9 +963,9 @@ strong {
   .mob-table tbody tr td {
     text-align: left;
     padding-left: 15px;
-  
   }
-  . but-lg{
+
+  .but-lg {
     display: block;
   }
   .btn-admin {
@@ -1047,7 +1058,6 @@ strong {
   .letter-5 {
     visibility: visible;
   }
-
 }
 
 /* Responsive design */
@@ -1577,7 +1587,6 @@ p {
   .online-sections {
     height: auto;
   }
-  
 }
 
 /* Responsive design */
@@ -2027,7 +2036,6 @@ p {
   left: 10px;
   transform: translateY(-50%);
   color: #bf9530;
-
 }
 
 .input-register input {
@@ -2199,13 +2207,12 @@ p {
   }
 }
 
-.tra{
- margin-bottom: 500px;
-  transform: translate(0% , 100%);
-   justify-content: space-between;
+.tra {
+  margin-bottom: 500px;
+  transform: translate(0%, 100%);
+  justify-content: space-between;
   display: flex;
 }
-
 
 /* ==================INSTRUCTOR================= */
 .image-overlay-containerINSTRUCTOR {
@@ -2270,8 +2277,8 @@ p {
   color: white;
 }
 /* ==========================CREATEEXAM */
-.btn-contact { 
-  border: 1px solid #BF9B30;
+.btn-contact {
+  border: 1px solid #bf9b30;
   color: white;
   background-color: transparent;
   padding: 7px 30px;
@@ -2291,7 +2298,7 @@ p {
 }
 
 .btn-contact:hover {
-  color: #BF9B30;
+  color: #bf9b30;
 }
 
 .adress-line {
@@ -2300,7 +2307,7 @@ p {
 }
 
 .content button {
-  background-color: #BF9B30;
+  background-color: #bf9b30;
   color: white;
   border-radius: 5px;
   font-size: 17px;
@@ -2312,8 +2319,6 @@ p {
   margin-top: 20px;
 }
 
-
-
 .second-content {
   display: flex;
   justify-content: space-around;
@@ -2321,7 +2326,7 @@ p {
 
 .lessons {
   padding: 50px;
-  border: 2px dashed #BF9B30;
+  border: 2px dashed #bf9b30;
   background-color: rgba(0, 0, 0, 0.4);
   list-style: decimal;
 }
@@ -2357,7 +2362,7 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 7px;
 }
-.all-qu1{
+.all-qu1 {
   display: flex;
 }
 .icon-qu1 i {
@@ -2406,13 +2411,13 @@ p {
   font-size: 15px;
   color: #fff;
 }
-.btn-correct1{
+.btn-correct1 {
   position: absolute;
-  top:25%;
+  top: 25%;
   right: 2%;
   width: 150px;
   height: 20%;
-  border-radius:5px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
   color: #fff;
@@ -2421,7 +2426,7 @@ p {
 
 .status {
   position: absolute;
-  right: 15px; 
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -2433,25 +2438,27 @@ p {
 }
 
 .status.correct {
-  background-color: #2e7d32; 
+  background-color: #2e7d32;
   color: white;
 }
 
 .status.wrong {
-  background-color: #ae0000; 
+  background-color: #ae0000;
   color: white;
 }
 
-button.delete-btn, button.add-btn {
+button.delete-btn,
+button.add-btn {
   background: none;
   border: none;
-  color: #bf9530; 
+  color: #bf9530;
   cursor: pointer;
   font-size: 20px;
   margin-left: 5px;
 }
 
-.inside input, .form-select {
+.inside input,
+.form-select {
   background-color: rgba(53, 51, 51, 0.8);
   border: none;
   outline: none;
@@ -2462,10 +2469,10 @@ button.delete-btn, button.add-btn {
   width: 100%;
 }
 .inpoot input {
-  padding-left: 30px; 
+  padding-left: 30px;
   width: 100%;
   box-sizing: border-box;
-  border:1px solid #bf9530;
+  border: 1px solid #bf9530;
 }
 .inpoot .fa {
   position: absolute;
@@ -2474,18 +2481,17 @@ button.delete-btn, button.add-btn {
   transform: translateY(-50%);
   color: rgb(110, 109, 109);
 }
-.regular i{
-position: absolute;
-left: 90%;
-top: 50%;
-transform: translateY(-50%);
-color: #bf9b30;
-
+.regular i {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bf9b30;
 }
 .anew-sec {
   width: 80%;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 5px dashed #BF9B30;
+  border: 5px dashed #bf9b30;
   padding: 50px;
 }
 
@@ -2497,7 +2503,7 @@ color: #bf9b30;
 .icon-exam i {
   padding-left: 10px;
   font-size: 20px;
-  color: #BF9B30;
+  color: #bf9b30;
 }
 
 .end-exam input {
@@ -2508,31 +2514,32 @@ color: #bf9b30;
   .content button {
     width: 120px;
     height: 35px;
-    background-color:  #BF9B30;
+    background-color: #bf9b30;
     color: white;
     border-radius: 5px;
     font-size: 17px;
     border: 0;
     margin-top: 10px;
   }
-.anew-sec{
-  padding: 5px;
-  width: 98%;
-  border: 0.5px dashed #bf9530;
-}
-.anew-sec input,.anew-sec select{
-  height: 50%;
-  width: 95%;
-  margin: auto
-}
-#inputState{
- height: 80px; 
-}
-.c1{
-  top: 40%;
-  right: 7%;
-  height: 40px;
-}
+  .anew-sec {
+    padding: 5px;
+    width: 98%;
+    border: 0.5px dashed #bf9530;
+  }
+  .anew-sec input,
+  .anew-sec select {
+    height: 50%;
+    width: 95%;
+    margin: auto;
+  }
+  #inputState {
+    height: 80px;
+  }
+  .baradmin .c1 {
+    top: 40%;
+    right: 7%;
+    height: 40px;
+  }
   .footer-btn {
     display: block;
     width: 95%;
@@ -2556,12 +2563,13 @@ color: #bf9b30;
 
   .icon-exam {
     margin-left: 80%;
-  }.icon-qu1{
+  }
+  .icon-qu1 {
     display: none;
   }
 }
 /* ======================= */
-.botton-cont-body{
+.botton-cont-body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .view-details {

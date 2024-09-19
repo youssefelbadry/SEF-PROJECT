@@ -8,10 +8,11 @@ function ProgressBarComponent() {
      <div
     className="progress-bar btn1"
     role="progressbar"
-    style={{ width: `90%` }}
+    style={{ width: `90%`, backgroundColor:'#bf9b30'}}
     aria-valuenow='90%'
     aria-valuemin="0"
     aria-valuemax="100"
+    
   >
     
   </div>

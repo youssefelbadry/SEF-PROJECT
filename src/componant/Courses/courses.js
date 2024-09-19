@@ -136,24 +136,28 @@ const Courses = () => {
   return (
     <div>
       <BarAdmin />
-      <div className="text-light">
+      <div className="container mt-3 mb-5 text-light">
         {/* SECTION 1 */}
 
         <HeaderPages />
         {/* ================================================================= */}
         {/* SECTION2 */}
-        <div className="admin-banel container">
-          <div>
-            <span>Admin Panel</span>
-            <div className="line"></div>
-            <span>6th June 2023</span>
+        <div className='row'>
+          <div className="top-bar mb-0 mb-md-5 d-flex justify-content-between align-items-center mb-3">
+          <div className="top-info text-white mb-0 mb-md-5 ">
+            <div className="admin-panel-title">
+              Admin Panel
+              <div className="lineP "></div>
+            </div>
+            <p className="panel-date mb-0 mb-md-5">6th June 2023</p>
           </div>
         </div>
         <div className="sec2 container">
-          <div class="left-nav col-sm-12 col-lg-3">
-            <Sidebar />
+          <div class="left-nav col-sm-12 col-lg-3 det-left">
+          <Sidebar/>
+
           </div>
-          <div className="container">
+          <div className="container mt-4">
             <div className="row">
               <div className="col">
                 <div className="container">
@@ -167,20 +171,21 @@ const Courses = () => {
                     <h2 style={{ margin: "20px 30px" }}>Courses</h2>
                     <div className="line"></div>
                   </div>
-
                   <div className="col-md-5 mt-3 mt-md-0">
-                    <div className="search-container  d-md-flex">
-                      <input
-                        type="text"
-                        className="search-input"
-                        placeholder="Search In Courses"
-                      />
-                      <button className="search-btn">
-                        <i className="fas fa-search"></i>
-                      </button>
-                    </div>
-                    <div className="d-block d-md-none"></div>
-                  </div>
+              <div className="search-container d-none d-md-flex">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search In Users"
+                />
+                <button className="search-btn">
+                  <i className="fas fa-search"></i>
+                </button>
+              </div>
+              <div className="d-block d-md-none">
+                
+              </div>
+            </div>
                 </div>
                 <table className="table table-mob">
                   <thead>
@@ -202,10 +207,12 @@ const Courses = () => {
             </div>
           </div>
         </div>
+    </div>
+    </div>
+
         {/* =========================================================================== */}
         <Footer />
       </div>
-    </div>
   );
 
 };

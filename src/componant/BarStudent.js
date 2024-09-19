@@ -38,7 +38,7 @@ const handlestudent = () => {
         <div className="container">
         
           <div
-            className="collapse navbar-collapse "
+            className="collapse navbar-collapse bbaarradmin"
             id="basic-navbar-nav"
             style={{ display: "flex", justifyContent: "end" }}
           >
